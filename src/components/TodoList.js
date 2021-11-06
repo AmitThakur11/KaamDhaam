@@ -5,10 +5,11 @@ import {
   IconButton,
   StackDivider,
   Spacer,
-  Badge
+  Image
 } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
 import React from "react";
+import EmptyList from "../media/emptyList.png"
 
 function TodoList({todos , deleteTodo}) {
   
@@ -33,9 +34,7 @@ function TodoList({todos , deleteTodo}) {
           </HStack>
         );
       })}
-    </VStack>:<Badge colorScheme ="green" p ="4" m="4" borderRadius="lg">
-        Empty list
-    </Badge>}
+    </VStack>:<Image boxSize = "160px"  src={EmptyList}/>}
     </>
   );
 }
